@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginForm">
+        <h1>Добро пожаловать в чат</h1>
+        <input type="text" id="usernameInput" placeholder="Введите ваше имя" autofocus>
+        <p>Выберите цвет сообщений:</p>
+        <div id="colorPicker">
+            <div class="color-option" style="background-color: #e43b3b;" data-color="#e43b3b"></div>
+            <div class="color-option" style="background-color: #e7712c;" data-color="#e7712c"></div>
+            <div class="color-option" style="background-color: #e0bf47;" data-color="#e0bf47"></div>
+            <div class="color-option" style="background-color: #61c735;" data-color="#61c735"></div>
+            <div class="color-option" style="background-color: #44a9dc;" data-color="#44a9dc"></div>
+            <div class="color-option" style="background-color: #4e5fe4;" data-color="#4e5fe4"></div>
+            <div class="color-option" style="background-color: #894eff;" data-color="#894eff"></div>
+        </div>
+        <button onclick="joinChat()" id="join">Войти</button>
+    </div>
+    <div id="chatContainer">
+        <div id="chatWrapper">
+            <div id="chat"></div>
+            <div id="messageInputWrapper">
+                <input type="text" id="message" placeholder="Введите сообщение">
+                <button id="sendBtn">></button>
+            </div>
+        </div>
+        <div id="userList">
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="user.js" defer></script>
+</body>
+</html>
